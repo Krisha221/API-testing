@@ -52,7 +52,7 @@ const updateEmployee = async (req, res) => {
 
 		const myEmployee = await Employee.findByIdAndUpdate(
 			req.params.id,
-			{ name, email, phone, city },
+			{ name, email, phone, role },
 			{ new: true }
 		)
 		if (!myEmployee) {
